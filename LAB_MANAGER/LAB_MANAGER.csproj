@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F9343C1-273B-44DD-A879-2B5FFBA32513}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LAB_MANAGER</RootNamespace>
+    <AssemblyName>LAB_MANAGER</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TNKTMT.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONTROL\CONFSERVER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONTROL\CONFSERVER.designer.cs">
+      <DependentUpon>CONFSERVER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\trydemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONTROL\trydemo.Designer.cs">
+      <DependentUpon>trydemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\Services.cs" />
+    <Compile Include="VIEW\CLIENTVIEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\CLIENTVIEW.Designer.cs">
+      <DependentUpon>CLIENTVIEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIEW\DETAIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\DETAIL.Designer.cs">
+      <DependentUpon>DETAIL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\RFIDMAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\RFIDMAN.Designer.cs">
+      <DependentUpon>RFIDMAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\DEVICE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\DEVICE.designer.cs">
+      <DependentUpon>DEVICE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\USER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\USER.designer.cs">
+      <DependentUpon>USER.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CONTROL\CONFSERVER.resx">
+      <DependentUpon>CONFSERVER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CONTROL\trydemo.resx">
+      <DependentUpon>trydemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\CLIENTVIEW.resx">
+      <DependentUpon>CLIENTVIEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\DETAIL.resx">
+      <DependentUpon>DETAIL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\RFIDMAN.resx">
+      <DependentUpon>RFIDMAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\DEVICE.resx">
+      <DependentUpon>DEVICE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\USER.resx">
+      <DependentUpon>USER.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MODEL\Resources\but_DEV.png" />
+    <None Include="MODEL\Resources\but_MAN.png" />
+    <None Include="MODEL\Resources\but_USER.png" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MODEL\Resources\TNKTMT2_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MODEL\Resources\but_detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MODEL\Resources\about.png" />
+    <None Include="MODEL\Resources\try.png" />
+    <Content Include="TNKTMT.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
